@@ -1,0 +1,16 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "JSPython example projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "datapipe-js": "0.0.1",
+    "papaparse": "^5.1.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

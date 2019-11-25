@@ -1,0 +1,13 @@
+
+print("|------------------------------|")
+print("| Welcome My JSPython program! |")
+print("|------------------------------|")
+x = [1, 2, 3, 4]
+x
+  .map((r, i) =>
+    v = r * i
+    return v
+  )
+  .filter(r => r * r)
+  .join(",")
+

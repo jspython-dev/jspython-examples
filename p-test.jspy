@@ -1,0 +1,42 @@
+import p-utils as 
+
+# test array
+arr = [1,2,3,4]
+# print(P)
+P.Array.extendPrototype()
+avg = arr.avg(arr)
+print(avg == 2.5, "Avg")
+
+sum = P.Array.sum(arr)
+print(sum == 10, "Sum")
+
+count = P.Array.count(arr)
+print(count == 4, "Count")
+
+min = P.Array.min(arr)
+print(min == 1, "Min")
+
+max = P.Array.max(arr)
+print(max == 4, "Max")
+
+objArr = [
+  {value:1},
+  {value:2},
+  {value:3}
+]
+
+avg = P.Array.avg(objArr, r => r.value)
+print(avg == 2, "Avg obj")
+
+sum = P.Array.sum(objArr, r => r.value)
+print(sum == 6, "Sum obj")
+
+count = P.Array.count(objArr, r => r.value)
+print(count == 3, "Count obj")
+
+min = P.Array.min(objArr, r => r.value)
+print(min == 1, "Min obj")
+
+max = P.Array.max(objArr, r => r.value)
+print(max == 3, "Max obj")
+

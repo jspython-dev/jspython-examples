@@ -1,0 +1,28 @@
+import papaparse
+from fs import readFileSync as rfs, writeFileSync
+import json5 as JSON5
+
+dataFolder = "./data/"
+content = rfs(dataFolder + "csv-sample.csv", "utf8")
+print(content)
+
+res = papaparse.parse(content)
+print(res.data.length)
+saveData = [{
+  "prop1": "val10",
+  "prop2": "val20"
+}, {
+  "prop1": "val11",
+  "prop2": "val21"
+}, {
+  "prop1": "val12",
+  "prop2": "val22"
+}]
+csvData = papaparse.unparse(saveData)
+jsonData = JSON.stringify(saveData)
+writeFileSync(dataFolder + "save-test.csv", csvData)
+writeFileSync(dataFolder + "save-test.json", jsonData)
+savedContent = rfs(dataFolder + "save-test.json", "utf8")
+jsonRes = JSON5.parse(savedContent)
+print(jsonRes)
+print(papaparse)
