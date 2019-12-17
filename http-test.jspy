@@ -1,0 +1,7 @@
+data = httpGet("https://restcountries.eu/rest/v2")
+print(data.length)
+print(data[236].name)
+
+a = 1
+assert(a == 1, "equal", "==")
+showAsserts()

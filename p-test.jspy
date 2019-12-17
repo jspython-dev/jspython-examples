@@ -1,22 +1,21 @@
-import p-utils as 
+from datapipe-js import dataPipe
 
 # test array
 arr = [1,2,3,4]
-# print(P)
-P.Array.extendPrototype()
-avg = arr.avg(arr)
+
+avg = dataPipe(arr).avg()
 print(avg == 2.5, "Avg")
 
-sum = P.Array.sum(arr)
+sum = dataPipe(arr).sum(arr)
 print(sum == 10, "Sum")
 
-count = P.Array.count(arr)
+count = dataPipe(arr).count(arr)
 print(count == 4, "Count")
 
-min = P.Array.min(arr)
+min = dataPipe(arr).min(arr)
 print(min == 1, "Min")
 
-max = P.Array.max(arr)
+max = dataPipe(arr).max(arr)
 print(max == 4, "Max")
 
 objArr = [
@@ -25,18 +24,18 @@ objArr = [
   {value:3}
 ]
 
-avg = P.Array.avg(objArr, r => r.value)
+avg = dataPipe(objArr).avg(r => r.value)
 print(avg == 2, "Avg obj")
 
-sum = P.Array.sum(objArr, r => r.value)
+sum = dataPipe(objArr).sum(r => r.value)
 print(sum == 6, "Sum obj")
 
-count = P.Array.count(objArr, r => r.value)
+count = dataPipe(objArr).count(r => r.value)
 print(count == 3, "Count obj")
 
-min = P.Array.min(objArr, r => r.value)
+min = dataPipe(objArr).min(r => r.value)
 print(min == 1, "Min obj")
 
-max = P.Array.max(objArr, r => r.value)
+max = dataPipe(objArr).max(r => r.value)
 print(max == 3, "Max obj")
 
