@@ -1,0 +1,9 @@
+{
+  "scripts": "# test script\nres1 = runRequest(\"Test1.Authentication\", False, False)\nshowInObjectExplorer(res1.body, \"Authentication\")\nselectBody = {}\nselectBody.fields = [\"Country\", \"City\", \"Sales\"]\nsetContextVariable(\"selectBody\", selectBody)\nrequestName = \"test1.select-query-test\"\nres2 = runRequest(requestName, True, False)\nprint(res2)\nchartConfig = {\"chartType\": \"Bar\", \"bindingX\": \"City\", \"header\": \"City Sales\"}\nplotChart(res2.body, \"Chart Config\", chartConfig)\n\ncreateChartTab(\"Summary\")\n  .x(\"City\")\n  .y(\"Sales\")\n  .plot(res2.body)\n  \nres3 = P.httpGet(\"https://restcountries.eu/rest/v2/region/oceania\").json()\nprint(res3)\n\ncreateChartTab(\"Oceania\",\n    r =>\n    r.header = \"Oceania population & area\"\n  )\n  .x(\"alpha3Code\",\n    r =>\n    r.title = \"Countries\"\n  )\n  .y(\"area\",\n    r =>\n    r.tooltipContent = \"<b>Area</b><br/>{y} sqr meters\"\n  )\n  .ySecondaryAxis(\n    r =>\n    r.min = 1000\n    r.max = 30000000\n    r.title = \"Population\"\n  )\n  .y(\"population\",\n    r =>\n    r.chartType = \"Bar\"\n  )\n  .plot(res3)",
+  "isPublic": true,
+  "id": 89,
+  "linkType": "MultiRequest",
+  "folder": "Charts",
+  "ownerName": "Test1",
+  "name": "createChartTab"
+}

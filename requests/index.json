@@ -1,0 +1,76 @@
+[
+  {
+    "id": 72,
+    "linkType": "MultiRequest",
+    "folder": "pscript examples",
+    "ownerName": "Test1",
+    "name": "products-query.pscript",
+    "link": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/products-query.pscript.json"
+  },
+  {
+    "id": 76,
+    "linkType": "RestRequest",
+    "folder": "Tests",
+    "ownerName": "Test1",
+    "name": "ViewRequest",
+    "description": "View test request",
+    "link": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/ViewRequest.json"
+  },
+  {
+    "id": 77,
+    "linkType": "MultiRequest",
+    "folder": "Tests",
+    "ownerName": "Test1",
+    "name": "test-view-request",
+    "link": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/test-view-request.json"
+  },
+  {
+    "id": 78,
+    "linkType": "JsonValue",
+    "folder": "DE",
+    "ownerName": "Test1",
+    "name": "DE test1",
+    "description": "test",
+    "link": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/DE-test1.json"
+  },
+  {
+    "id": 82,
+    "linkType": "JsonValue",
+    "folder": "DE",
+    "ownerName": "Test1",
+    "name": "DE test2",
+    "link": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/DE-test2.json"
+  },
+  {
+    "id": 89,
+    "linkType": "MultiRequest",
+    "folder": "Charts",
+    "ownerName": "Test1",
+    "name": "createChartTab",
+    "link": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/createChartTab.json"
+  },
+  {
+    "id": 91,
+    "linkType": "MultiRequest",
+    "folder": "Grids",
+    "ownerName": "Test1",
+    "name": "Simple Grid3",
+    "link": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/Simple-Grid3.json"
+  },
+  {
+    "id": 101,
+    "linkType": "MultiRequest",
+    "folder": "Tests",
+    "ownerName": "Test1",
+    "name": "params",
+    "link": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/params.json"
+  },
+  {
+    "id": 103,
+    "linkType": "MultiRequest",
+    "folder": "Tests",
+    "ownerName": "vkuku",
+    "name": "params-vk",
+    "link": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/params-vk.json"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "scripts": "result.auth = runRequest(\"Test1.Authentication\", False, False)\nresult.viewRequest = runRequest(\"test1.ViewRequest\")",
+  "isPublic": true,
+  "id": 77,
+  "linkType": "MultiRequest",
+  "folder": "Tests",
+  "ownerName": "Test1",
+  "name": "test-view-request"
+}

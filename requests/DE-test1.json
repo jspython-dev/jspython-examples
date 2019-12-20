@@ -1,0 +1,15 @@
+{
+  "request": {
+    "property": "value",
+    "p2": "v2",
+    "auth": {
+      "type": "None"
+    }
+  },
+  "isPublic": true,
+  "id": 82,
+  "linkType": "JsonValue",
+  "folder": "DE",
+  "ownerName": "Test1",
+  "name": "DE test1"
+}

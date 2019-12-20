@@ -1,0 +1,12 @@
+{
+  "request": {
+    "test": 1
+  },
+  "isPublic": true,
+  "id": 78,
+  "linkType": "JsonValue",
+  "folder": "DE",
+  "ownerName": "Test1",
+  "name": "DE test2",
+  "description": "test"
+}

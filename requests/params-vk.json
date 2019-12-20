@@ -1,0 +1,9 @@
+{
+  "scripts": "p1 = params(\"param1\")\nassert(p1 == \"1\", \"params param1\", \"Query parameter\")\np = params(\"param\")\nassert(p == \"\", \"params p\", \"Query parameter empty\")\n\np2 = params(\"p2\")\nassert(p2 == null, \"param p2\", \"Null\")\nshowAsserts()\n",
+  "isPublic": true,
+  "id": 103,
+  "linkType": "MultiRequest",
+  "folder": "Tests",
+  "ownerName": "vkuku",
+  "name": "params-vk"
+}

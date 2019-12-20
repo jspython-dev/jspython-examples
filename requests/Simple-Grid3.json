@@ -1,0 +1,9 @@
+{
+  "scripts": "data = httpGet(\"https://restcountries.eu/rest/v2/region/oceania\")\nprint(data)\ncreateGridTab(\"Table\")\n  .column(\"name\",\n    r =>\n    r.headerText = \"Country\"\n  )\n  .column(\"alpha3Code\",\n    r =>\n    r.allowSorting = false\n  )\n  .hidecolumn(\"alpha2Code\")\n  .show(data)\n  \ncreateGridTab(\"Table2\").show(data)\n",
+  "isPublic": true,
+  "id": 91,
+  "linkType": "MultiRequest",
+  "folder": "Grids",
+  "ownerName": "Test1",
+  "name": "Simple Grid3"
+}
