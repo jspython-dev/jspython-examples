@@ -1,0 +1,43 @@
+# test script
+res1 = runRequest("Test1.Authentication", False, False)
+showInObjectExplorer(res1.body, "Authentication")
+selectBody = {}
+selectBody.fields = ["Country", "City", "Sales"]
+setContextVariable("selectBody", selectBody)
+requestName = "test1.select-query-test"
+res2 = runRequest(requestName, True, False)
+print(res2)
+chartConfig = {"chartType": "Bar", "bindingX": "City", "header": "City Sales"}
+plotChart(res2.body, "Chart Config", chartConfig)
+
+createChartTab("Summary")
+  .x("City")
+  .y("Sales")
+  .plot(res2.body)
+
+res3 = P.httpGet("https://restcountries.eu/rest/v2/region/oceania").json()
+print(res3)
+
+createChartTab("Oceania",
+    r =>
+    r.header = "Oceania population & area"
+  )
+  .x("alpha3Code",
+    r =>
+    r.title = "Countries"
+  )
+  .y("area",
+    r =>
+    r.tooltipContent = "<b>Area</b><br/>{y} sqr meters"
+  )
+  .ySecondaryAxis(
+    r =>
+    r.min = 1000
+    r.max = 30000000
+    r.title = "Population"
+  )
+  .y("population",
+    r =>
+    r.chartType = "Bar"
+  )
+  .plot(res3)

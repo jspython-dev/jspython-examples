@@ -1,9 +1,0 @@
-{
-  "scripts": "# pscript\n\nif app?.token_expiration == null or dateTime(app.token_expiration) < dateTime():\n  runRequest(\"Test1.Authentication\", false, false)\n\ndef authenticationHeader():\n  headers = {}\n  headers.Authorization = \"Bearer \" + app.authentication_token\n  headers\n\nasync def getSqlData(owner, tableName):\n  result = httpPost(\n    app.base_url + \"/api/sql/SQL-Shared/select/from/\" + owner + \"/\" + tableName, {},\n    authenticationHeader())\n  return mapTableToValues(result.table)  \n\n\nproducts = getSqlData(app.user, \"NorthwindProducts\")\ncategories = getSqlData(app.user, \"NorthwindCategories\")\n\nif isNull(products.length, 0) == 0:\n  return\n\nproduct = products\n  .map(r =>\n    c = categories.find(c => c.CategoryID == r.CategoryID)\n    r.CategoryName = c?.CategoryName\n    r\n  )\n\nshowInObjectExplorer(products, \"Products\")\n# showInObjectExplorer(categories, \"Categories\")\n",
-  "isPublic": true,
-  "id": 72,
-  "linkType": "MultiRequest",
-  "folder": "pscript examples",
-  "ownerName": "Test1",
-  "name": "products-query.pscript"
-}

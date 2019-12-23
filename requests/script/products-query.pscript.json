@@ -1,0 +1,9 @@
+{
+  "scripts": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/script/products-query.jspy",
+  "isPublic": true,
+  "id": 72,
+  "linkType": "MultiRequest",
+  "folder": "pscript examples",
+  "ownerName": "script",
+  "name": "products-query.pscript"
+}

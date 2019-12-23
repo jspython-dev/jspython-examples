@@ -1,0 +1,32 @@
+def preRequest():
+  print(session)
+  print(app)
+  print(app.user)
+  app.testVal = "TestValue"
+  res = httpGet("https://restcountries.eu/rest/v2/region/oceania")
+  print(res)
+  quandl = httpGet("https://www.quandl.com/api/v3/datasets/CHRIS/MGEX_MW5.json?api_key=LEM5mQqZUZt2eWjiPJtF")
+  print(quandl.dataset.data)
+  chartConfig = {"chartType": "Bar", "bindingX": "name", "header": "Country population",
+    "series": [{name: "name", binding: "population"}]
+  }
+  plotChart(res, "Oceania Population", chartConfig)
+  runRequest("Test1.Authentication", False, False)
+  session.sTest = "sTestVal1"
+
+def successResponse(response):
+  print("successResponse")
+  print(app.testVal)
+  print(session.sTest)
+  print(response)
+  error("Test error message - 0")
+  showInObjectExplorer(response.body, "Content")
+  showInJSON(response.headers, "Header")
+  assert(True, "TestView", "Test Success Description")
+  assert(True, "TestView", "Test Failed Description")
+  error("Test error message - 1")
+  error("Test error message - 2")
+  error("Test error message - 3")
+
+def errorResponse(error):
+  print(error)

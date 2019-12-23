@@ -1,0 +1,9 @@
+{
+  "scripts": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/params/params.jspy",
+  "isPublic": true,
+  "id": 101,
+  "linkType": "MultiRequest",
+  "folder": "Tests",
+  "ownerName": "params",
+  "name": "params"
+}

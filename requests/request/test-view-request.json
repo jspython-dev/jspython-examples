@@ -1,0 +1,9 @@
+{
+  "scripts": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/request/test-view.jspy",
+  "isPublic": true,
+  "id": 77,
+  "linkType": "MultiRequest",
+  "folder": "Tests",
+  "ownerName": "request",
+  "name": "test-view-request"
+}

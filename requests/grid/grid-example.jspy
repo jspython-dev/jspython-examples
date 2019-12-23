@@ -1,0 +1,15 @@
+data = httpGet("https://restcountries.eu/rest/v2/region/oceania")
+print(data)
+createGridTab("Table")
+  .column("name",
+    r =>
+    r.headerText = "Country"
+  )
+  .column("alpha3Code",
+    r =>
+    r.allowSorting = false
+  )
+  .hidecolumn("alpha2Code")
+  .show(data)
+
+createGridTab("Table2").show(data)

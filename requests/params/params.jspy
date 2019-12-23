@@ -1,0 +1,8 @@
+p1 = params("param1")
+assert(p1 == "1", "params param1", "Query parameter")
+p = params("param")
+assert(p == "", "params p", "Query parameter empty")
+
+p2 = params("p2")
+assert(p2 == null, "param p2", "Null")
+showAsserts()

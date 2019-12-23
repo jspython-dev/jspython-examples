@@ -1,0 +1,9 @@
+{
+  "scripts": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/chart/createChartTab.jspy",
+  "isPublic": true,
+  "id": 89,
+  "linkType": "MultiRequest",
+  "folder": "Charts",
+  "ownerName": "chart",
+  "name": "createChartTab"
+}

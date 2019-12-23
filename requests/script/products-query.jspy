@@ -1,0 +1,32 @@
+# pscript
+
+if app?.token_expiration == null or dateTime(app.token_expiration) < dateTime():
+  runRequest("Test1.Authentication", false, false)
+
+def authenticationHeader():
+  headers = {}
+  headers.Authorization = "Bearer " + app.authentication_token
+  headers
+
+async def getSqlData(owner, tableName):
+  result = httpPost(
+    app.base_url + "/api/sql/SQL-Shared/select/from/" + owner + "/" + tableName, {},
+    authenticationHeader())
+  return mapTableToValues(result.table)
+
+
+products = getSqlData(app.user, "NorthwindProducts")
+categories = getSqlData(app.user, "NorthwindCategories")
+
+if isNull(products.length, 0) == 0:
+  return
+
+product = products
+  .map(r =>
+    c = categories.find(c => c.CategoryID == r.CategoryID)
+    r.CategoryName = c?.CategoryName
+    r
+  )
+
+showInObjectExplorer(products, "Products")
+# showInObjectExplorer(categories, "Categories")

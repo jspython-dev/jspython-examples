@@ -1,0 +1,53 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://worksheets-web-api-test.azurewebsites.net/api/sql/SQL-Shared/db-object/test1/testView1/Fields,PrimaryKeys,sqltext",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json",
+        "active": true
+      },
+      {
+        "name": "Authorization",
+        "value": "Bearer {{authentication_token}}",
+        "active": true
+      }
+    ],
+    "queryParameters": [],
+    "contentType": "application/json",
+    "auth": {
+      "type": "None"
+    }
+  },
+  "workflows": {
+    "failOnError": true,
+    "include": [
+      "@common"
+    ],
+    "vars": {},
+    "workflowsMap": {
+      "pre-request-actions": [],
+      "success-response-actions": [],
+      "error-response-actions": []
+    },
+    "consts": {}
+  },
+  "scripts": "https://raw.githubusercontent.com/jspython-dev/jspython-examples/master/requests/request/view-request.jspy",
+  "uiSettings": {
+    "isRequestPanelCollapsed": false,
+    "showObjectExplorer": true,
+    "showContent": true,
+    "showHeader": true,
+    "showWorkflow": true,
+    "showPages": true
+  },
+  "dynamicPages": [],
+  "isPublic": true,
+  "id": 76,
+  "linkType": "RestRequest",
+  "folder": "Tests",
+  "ownerName": "request",
+  "name": "ViewRequest",
+  "description": "View test request"
+}
