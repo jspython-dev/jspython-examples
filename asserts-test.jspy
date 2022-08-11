@@ -1,0 +1,13 @@
+assert('test1')
+    .equal(4, 4)
+
+assert('test2', {x: 1})
+    .equal(1, d=>d.x)
+
+print('This is print message', 2, dateTime(), {x:3,y:7}, [1,3,4])
+
+assert('test3')
+    .equal(4, 5)
+# showAsserts()
+
+return null

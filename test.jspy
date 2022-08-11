@@ -11,3 +11,4 @@ x
   .filter(r => r * r)
   .join(",")
 
+getExecutionContext()
